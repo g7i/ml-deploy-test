@@ -5,4 +5,4 @@ RUN mkdir /code
 WORKDIR /code
 COPY . /code/
 RUN pip install -r requirements.txt
-CMD gunicorn mlTest.wsgi:application --bind 0.0.0.0:8000
+CMD gunicorn mlTest.wsgi:application --bind 0.0.0.0:$PORT
